@@ -35,16 +35,16 @@ const DASS21: React.FC<FormComponentProps<DASS21Answers>> = ({ onNext, onPrev, i
             <p className="text-lg font-semibold text-gray-800 mb-3">
               <span className="text-blue-600 mr-2">{question.id}.</span> {question.text}
             </p>
-            <div className="flex flex-wrap gap-4 justify-around md:justify-start">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[0, 1, 2, 3].map(score => (
-                <label key={score} className="flex items-center space-x-2 cursor-pointer text-base">
+                <label key={score} className="flex items-center space-x-2 cursor-pointer text-lg">
                   <input
                     type="radio"
                     name={`dass_q${question.id}`}
                     value={score}
                     checked={answers[question.id] === score}
                     onChange={() => handleAnswerChange(question.id, score)}
-                    className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                    className="w-5 h-5 text-blue-600 focus:ring-blue-500"
                   />
                   <span className="text-gray-700">{scoreOptions[score]}</span>
                 </label>

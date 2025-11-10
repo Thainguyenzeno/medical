@@ -180,11 +180,11 @@ export const beckQuestions: BeckQuestionGroup[] = [
     options: [
       { value: 0, text: "Tôi ăn vẫn ngon miệng như trước." },
       { value: 1, text: "Tôi ăn kém ngon miệng hơn trước." },
-      { value: 1, text: "Tôi ăn ngon miệng hơn trước." },
-      { value: 2, text: "Tôi ăn kém ngon miệng hơn trước rất nhiều." },
-      { value: 2, text: "Tôi ăn ngon miệng hơn trước rất nhiều." },
-      { value: 3, text: "Tôi không thấy ngon miệng một chút nào cả." },
-      { value: 3, text: "Lúc nào tôi cũng thấy thèm ăn." },
+      { value: 2, text: "Tôi ăn ngon miệng hơn trước." },
+      { value: 3, text: "Tôi ăn kém ngon miệng hơn trước rất nhiều." },
+      { value: 4, text: "Tôi ăn ngon miệng hơn trước rất nhiều." },
+      { value: 5, text: "Tôi không thấy ngon miệng một chút nào cả." },
+      { value: 6, text: "Lúc nào tôi cũng thấy thèm ăn." },
     ],
   },
   {

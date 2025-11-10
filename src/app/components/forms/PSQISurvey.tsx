@@ -77,8 +77,9 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 1 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <label htmlFor="q1_bedtime" className="block text-lg font-semibold text-gray-900 mb-2">
-          1. Trong tháng qua bạn thường lên giường đi ngủ lúc mấy giờ?
+          <span className='text-blue-600'>1.</span> Trong tháng qua bạn thường lên giường đi ngủ lúc mấy giờ?
         </label>
+        <p className="text-sm text-gray-600 mt-1">Giờ đi ngủ thường là:</p>
         <input
           type="time"
           id="q1_bedtime"
@@ -88,13 +89,12 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
           className="w-full md:w-1/3 p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-lg"
           required
         />
-        <p className="text-sm text-gray-600 mt-1">Giờ đi ngủ thường là:</p>
       </div>
 
       {/* Question 2 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <label htmlFor="q2_latency" className="block text-lg font-semibold text-gray-900 mb-2">
-          2. Trong tháng qua, mỗi đêm bạn thường mất bao nhiêu phút mới chợp mắt được?
+          <span className='text-blue-600'>2.</span> Trong tháng qua, mỗi đêm bạn thường mất bao nhiêu phút mới chợp mắt được?
         </label>
         <input
           type="number"
@@ -112,7 +112,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 3 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <label htmlFor="q3_waketime" className="block text-lg font-semibold text-gray-900 mb-2">
-          3. Trong tháng qua bạn thường dậy buổi sáng (RA KHỎI GIƯỜNG) lúc mấy giờ?
+          <span className='text-blue-600'>3.</span> Trong tháng qua bạn thường dậy buổi sáng (RA KHỎI GIƯỜNG) lúc mấy giờ?
         </label>
         <input
           type="time"
@@ -129,7 +129,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 4 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <label htmlFor="q4_sleep_hours" className="block text-lg font-semibold text-gray-900 mb-2">
-          4. Trong tháng qua, mỗi đêm bạn thường ngủ được mấy tiếng đồng hồ?
+          <span className='text-blue-600'>4.</span> Trong tháng qua, mỗi đêm bạn thường ngủ được mấy tiếng đồng hồ?
         </label>
         <input
           type="number"
@@ -150,7 +150,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 5 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <p className="text-lg font-semibold text-gray-900 mb-3">
-          5. Trong tháng qua, bạn có thường gặp các vấn đề sau gây mất ngủ không?
+          <span className='text-blue-600'>5.</span> Trong tháng qua, bạn có thường gặp các vấn đề sau gây mất ngủ không?
         </p>
         {q5SubQuestions.map((item) => (
           <div key={item.id} className="mb-4">
@@ -222,7 +222,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 6 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <p className="text-lg font-semibold text-gray-900 mb-3">
-          6. Trong tháng qua, bạn có thường phải sử dụng thuốc ngủ không (sử dụng theo đơn hoặc tự mua về dùng)?
+          <span className='text-blue-600'>6.</span> Trong tháng qua, bạn có thường phải sử dụng thuốc ngủ không (sử dụng theo đơn hoặc tự mua về dùng)?
         </p>
         <div className="flex flex-wrap gap-4">
           {["0", "1", "2", "3"].map(val => (
@@ -250,7 +250,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 7 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <p className="text-lg font-semibold text-gray-900 mb-3">
-          7. Trong tháng qua, bạn có hay gặp khó khăn để giữ đầu óc tỉnh táo lúc lái xe, lúc ăn hay lúc tham gia vào các hoạt động xã hội hay không?
+          <span className='text-blue-600'>7.</span> Trong tháng qua, bạn có hay gặp khó khăn để giữ đầu óc tỉnh táo lúc lái xe, lúc ăn hay lúc tham gia vào các hoạt động xã hội hay không?
         </p>
         <div className="flex flex-wrap gap-4">
           {["0", "1", "2", "3"].map(val => (
@@ -278,7 +278,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 8 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <p className="text-lg font-semibold text-gray-900 mb-3">
-          8. Trong tháng qua, bạn có hay gặp khó khăn để duy trì hứng thú hoàn thành các công việc không?
+          <span className='text-blue-600'>8.</span> Trong tháng qua, bạn có hay gặp khó khăn để duy trì hứng thú hoàn thành các công việc không?
         </p>
         <div className="flex flex-wrap gap-4">
           {["0", "1", "2", "3"].map(val => (
@@ -306,7 +306,7 @@ const PSQISurvey: React.FC<FormComponentProps<PSQISurveyData>> = ({ onNext, onPr
       {/* Question 9 */}
       <div className="mb-6 p-4 border border-gray-200 rounded-md bg-gray-50">
         <p className="text-lg font-semibold text-gray-900 mb-3">
-          9. Trong tháng qua, nhìn chung bạn đánh giá về chất lượng giấc ngủ của mình như thế nào?
+          <span className='text-blue-600'>9.</span> Trong tháng qua, nhìn chung bạn đánh giá về chất lượng giấc ngủ của mình như thế nào?
         </p>
         <div className="flex flex-wrap gap-4">
           {["0", "1", "2", "3"].map(val => (

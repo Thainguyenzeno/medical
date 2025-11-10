@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PatientInfo from '../components/forms/PatientInfo';
 import GeneralSymptomAssessment from '../components/forms/GeneralSymptomAssessment';
 import PSQISurvey from '../components/forms/PSQISurvey';
